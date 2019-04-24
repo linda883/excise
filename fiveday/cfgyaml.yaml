@@ -1,0 +1,10 @@
+-test_post_tag:
+    url: https://petstore.swagger.io/v2/pet/8
+    method: POST
+    hearder:
+      Content-Type: application/x-www-form-urlencoded
+    payload:
+      name: duod3o
+      status: nor3mal
+    validate:
+      {"status_code":200}
