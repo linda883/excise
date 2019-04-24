@@ -1,9 +1,9 @@
-# def hello_func(greeting, name='linda'):
-#     return '{} {} 你好.'.format(greeting, name)
-#
-#
-# print(hello_func('hi'))
-# print(hello_func('hi', 'tome'))
+def hello_func(greeting, name='linda'):
+    return '{} {} 你好.'.format(greeting, name)
+
+
+print(hello_func('hi'))
+print(hello_func('hi', 'tome'))
 
 
 def student_info(*args, **kwargs):

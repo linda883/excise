@@ -1,26 +1,12 @@
-ages ={
+ages = {
     'linda': 18,
     'leimeng': 51,
     'yujian': 31
 }
-# 通常
-if 'linda' in ages:
-    age = ages['linda']
-else:
-    age = 'Unknown'
 
-print(age)
+# 从字典中获得key的值 ，如果有输出，如果没有写unknown
 
-# 技巧
-
-age = ages.get('linda', 'Unknown')
+age = ages.get('linda1', 'Unknown')
 print(age)
 
 
-
-func_dict={
-    'cond_a':11,
-    'cond_b':22,
-}
-
-print(func_dict.get('cond_a',18))

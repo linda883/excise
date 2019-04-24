@@ -39,3 +39,9 @@ print(s2.join(seq))
 str4 = "编号 标题 测试数据 测试结果"
 (no, title, test_data, test_result) = str4.split(" ")
 print(test_data)
+
+#  格式输出
+print('Hi, %s, you have $%d.' % ('linda', 100000000))
+
+print('Hello, {0}, 成绩提升了 {1:.1f}%'.format('小明', 17.125))  # 保留小数点后1位
+print("{} {}".format("hello", "world"))  # 不设置指定位置，按默认顺序
