@@ -1,9 +1,9 @@
-import time
-import os
-
-# 生成的测试报告的名字是根据当前时间和文件名全名的。
-report_time = time.strftime('%Y%m%d%H%M%S', time.localtime())
-print(report_time+"_"+os.path.basename(__file__))
+# import time
+# import os
+#
+# # 生成的测试报告的名字是根据当前时间和文件名全名的。
+# report_time = time.strftime('%Y%m%d%H%M%S', time.localtime())
+# print(report_time+"_"+os.path.basename(__file__))
 
 
 import random

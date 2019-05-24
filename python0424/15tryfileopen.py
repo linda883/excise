@@ -1,9 +1,9 @@
 try:
-    with open('myfile.txt') as fh:
+    with open('myfile1.txt') as fh:
         file_data = fh.read()
     print(file_data)
 except FileNotFoundError:
-    print('The data file is missing.')
+    print('The data file is missing.丢了')
 except PermissionError:
     print('This is not allowed.')
 except Exception as err:

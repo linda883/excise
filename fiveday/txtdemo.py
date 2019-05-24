@@ -14,9 +14,9 @@ with open("myfile.txt") as f:
 my_list = ["login","username","888888", "password", "8888888"]
 my_dict_str = '{"login": {"username": "888888", "password": "8888888"}, "loginout": {"un6": "777777", "pd": "333333"}}'
 
-with open("my_dict.txt", "w") as f:
-    for k in my_dict_str:
-        f.write(k)
-        # f.write("\n")
-        # print(k, file=f)
+my_dict = {"login": {"username": "888888", "password": "8888888"}, "loginout": {"un6": "777777", "pd": "333333"}}
+
+with open("my_dict.txt", "w+") as f:
+    f.write(my_dict_str)
+
 

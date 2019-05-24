@@ -1,39 +1,43 @@
 # -*- coding:utf-8 -*-
 
-import csv23
+import csv
+
+
+def read_csv_1():
+    with open('username.csv') as csvDataFile:
+        csv_Reader = csv.reader(csvDataFile)
+        for row in csv_Reader:
+            print(row)
+
+
+def read_csv_2():
+    username = []
+    email = []
+
+    with open('username.csv') as csvDataFile:
+        csvReader = csv.reader(csvDataFile)
+        for row in csvReader:
+            username.append(row[0])
+            email.append(row[1])
+
+    print(username[1:])
+    print(email[1:])
 
 
 def read_csvfile():
     with open('username.csv', newline='') as csvfile:
-        spamreader = csv23.reader(csvfile, delimiter=' ', quotechar=',')
+        spamreader = csv.reader(csvfile, delimiter=' ', quotechar=',')
         for row in spamreader:
-            print(', '.join(row))
+            print(row)
+            # print(' '.join(row))
 
 
 def write_csvfile():
-    with open('username.csv', 'w', newline='') as csvfile:
-        spamwriter = csv23.writer(csvfile, delimiter=' ',
-                                  quotechar=',', quoting=csv23.QUOTE_MINIMAL)
+    with open('username1.csv', 'w', newline='') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=' ',
+                                  quotechar=',', quoting=csv.QUOTE_MINIMAL)
         spamwriter.writerow(['linda'] * 5 + ['Baked Beans'])
         spamwriter.writerow(['linda', 'Lovely Spam', 'Wonderful Spam'])
 
 
-def read_csv_p3():
-    with open('username.csv', newline='', encoding='UTF-8') as csvfile:
-        reader = csv23.DictReader(csvfile)
-        for row in reader:
-            print(row['username'], row['email'])
-            print(row['username'])
-
-
-# 取一 行数据
-def read_csv_1_with_name():
-    with open('username.csv', newline='', encoding='UTF-8') as csvfile:
-        reader = csv23.DictReader(csvfile)
-        for row in reader:
-            if row['username'] == 'linda':
-                print(row['username'], row['email'])
-
-
-
-
+read_csv_2()
