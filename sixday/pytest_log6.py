@@ -18,7 +18,7 @@ class TestClass:
 
     @pytest.fixture()
     def init_data(self):
-        log.info('\ntest_data_setup()')
+        log.info('test_data_setup')
         yield
         log.info('teardown test_data')
 
@@ -26,7 +26,8 @@ class TestClass:
     def screen_shot(self):
         log.info("screen_shot")
 
-    def test_qqq(self):
+    @pytest.mark.usefixtures
+    def test_qqq(self, init_data):
         log.info("xxxxxxxxxxxqqqq")
         assert 4 == 5
 

@@ -12,7 +12,7 @@ import time
 # 设置输出的格式和位置，# 模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志
 #  # a是追加模式，默认如果不写的话，就是追加模式  # 日志格式
 logfilename = time.strftime('%Y%m%d-%H%M%S')
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.WARNING,
                     filename=logfilename+'.log',
                     filemode='a',
                     format=

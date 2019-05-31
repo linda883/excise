@@ -21,9 +21,9 @@ def init_log(log_level, log_path):
 
 
 if __name__ == "__main__":
-    log = init_log(1, "monitor.log")
+    log = init_log(10, "monitor.log")
     log.info("建立日志")
-    monitor_cfg = load_config("monitor3.cfg")
+    monitor_cfg = load_config("monitor.cfg")
     try:
         for section in monitor_cfg.sections():
             log.info("section is " + section)
